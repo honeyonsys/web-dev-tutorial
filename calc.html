@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <title>abc</title>
+        <style>
+            .box{
+                width: 300px;
+                height: 300px;
+                border: 2px solid black;
+                margin: 165px 100px 100px 500px;
+            }
+            .textbox{
+                width: 270px;
+                height: 45px;
+                margin-left: 12px;
+                margin-top: 20px;
+                border: 2px solid black;
+            }
+             .bt1>button{
+                width: 40px;
+                height: 30px;
+                margin-top: 15px;
+                margin-left: 24px;
+                box-shadow: 0px 0px 5px blue; 
+                background-color: whitesmoke;
+
+            } 
+           .bt1>button:hover{
+           background-color:grey;
+          } 
+          
+        </style>
+        <script>
+            let a = "harish";
+            a = "manmeet";
+            a = "priyanka";
+
+            const b = "harish";
+
+            console.log("This is " + a);
+            console.error("This is error");
+            console.info("this is info");
+
+
+            let html = "<h1>This is heading</h1>";
+            html += "<p>this is paragraph</p>";
+            document.write(html);
+            
+            function fillText(obj) {
+                let thisValue = obj.innerText;
+                let alreadyValue = document.getElementById('calcText').value;
+                let concatenate = alreadyValue + thisValue;
+                document.getElementById('calcText').value = concatenate;
+                
+            }
+
+            function deletechar() {
+                let textBoxValue = document.getElementById('calcText').value;
+                let textLenth = textBoxValue.length;
+                console.log(textLenth);
+                let finalText = textBoxValue.slice(0, textLenth-1);
+                document.getElementById('calcText').value = finalText;
+            } 
+        </script>
+    </head>
+    <body>
+         
+        <div class="box">
+        
+            <input type="text" id="calcText" class="textbox"  >
+       
+         <div class="bt1">
+            <button>%</button>
+            <button >CE</button>
+            <button >C</button>
+            <button onclick="deletechar()">&#x232b</button>
+            
+            <button onclick="fillText(this)">7</button>
+            <button onclick="fillText(this)">8</button>
+            <button onclick="fillText(this)">9</button>
+            <button>&#247</button>
+           
+            <button onclick="fillText(this)">4</button>
+            <button onclick="fillText(this)">5</button>
+            <button onclick="fillText(this)">6</button>
+            <button>&times</button>
+        
+            <button onclick="fillText(this)">1</button>
+            <button onclick="fillText(this)">2</button>
+            <button onclick="fillText(this)">3</button>
+            <button>-</button>
+            <button style="background-color: blue; color: white;">=</button>
+            <button onclick="fillText(this)">0</button>
+            <button onclick="fillText(this)">.</button>
+            <button>+</button>         
+            </div>   
+           </div>  
+           
+        </div>
+       
+    </body>
+</html>
