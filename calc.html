@@ -59,10 +59,17 @@
                 console.log(textLenth);
                 let finalText = textBoxValue.slice(0, textLenth-1);
                 document.getElementById('calcText').value = finalText;
-            } 
+            }
+            
+            function consoleOutputAdd() {
+                let textValue = "345+977";
+                let splitNumbers = textValue.split("+");
+                let sum = parseInt(splitNumbers[0]) + parseInt(splitNumbers[1]);
+                console.log(sum);
+            }
         </script>
     </head>
-    <body>
+    <body onload="consoleOutputAdd()">
          
         <div class="box">
         
